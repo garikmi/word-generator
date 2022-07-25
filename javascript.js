@@ -5,6 +5,10 @@ document.getElementById("quantity").max = words.length;
 
 var currentWords = []
 
+function isCheckboxArray() {
+  return document.getElementById("checkbox_array").checked;
+}
+
 function getQuantity() {
   quantity = parseInt(document.getElementById("quantity").value, 10)
   if (quantity < 1) {
@@ -17,9 +21,27 @@ function getQuantity() {
 }
 
 function copy() {
-  string = ""
+  if (isCheckboxArray()) {
+    string = "["
+  } else {
+    string = ""
+  }
   for (let i = 0; i < currentWords.length; i++) {
-    string += i < currentWords.length-1 ? (currentWords[i] + " ") : (currentWords[i])
+    if (isCheckboxArray()) {
+      string += "\"" + currentWords[i] + "\""
+    } else {
+      string += currentWords[i]
+    }
+    if (i < currentWords.length-1) {
+      if (isCheckboxArray()) {
+        string += ", "
+      } else {
+        string += " "
+      }
+    }
+  }
+  if (isCheckboxArray()) {
+    string += "]"
   }
   navigator.clipboard.writeText(string);
 }

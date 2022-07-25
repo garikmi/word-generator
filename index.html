@@ -15,7 +15,12 @@
 
     <input class="bg-shark p-1 rounded-full mt-9 border border-bunker" type="number" id="quantity" name="quantity" min="1">
     <button class="px-2 py-1 rounded-full border-bunker border bg-dodger_blue text-bunker" type="button" onclick="generateWords()">Generate</button>
-    <button class="px-2 py-1 rounded-full border-bunker border bg-shark text-cadet_blue" type="button" onclick="copy()">Copy</button>
+
+    <div class="mt-4">
+      <input type="checkbox" id="checkbox_array">
+      <h3 class="inline">Array</h3>
+      <button class="px-2 py-1 rounded-full border-bunker border bg-shark text-cadet_blue" type="button" onclick="copy()">Copy</button>
+    </div>
 
     <p id="words" class="my-9 max-w-lg mx-auto"></p>
 
