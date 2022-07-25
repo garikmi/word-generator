@@ -9,8 +9,13 @@
   </head>
   <body class="font-mono bg-woodsmoke text-cadet_blue text-center">
     <h1 class="text-3xl text-ghost font-bold mt-12">Word Generator</h1>
+
+    <h4 class="mt-9">There are currently 370,105 words.</h4>
+    <h4 class=""><span class="text-rob_roy">Note</span>: large range will slow down your browser</h4>
+
     <input class="bg-shark p-1 rounded-full mt-9 border border-bunker" type="number" id="quantity" name="quantity" min="1">
     <button class="px-2 py-1 rounded-full border-bunker border bg-dodger_blue text-bunker" type="button" onclick="generateWords()">Generate</button>
+    <button class="px-2 py-1 rounded-full border-bunker border bg-shark text-cadet_blue" type="button" onclick="copy()">Copy</button>
 
     <p id="words" class="my-9 max-w-lg mx-auto"></p>
 
