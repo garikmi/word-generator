@@ -15,6 +15,14 @@ function getQuantity() {
 
   return quantity
 }
+
+function displayWords() {
+  string = ""
+  for (let i = 0; i < currentWords.length; i++) {
+    string += i < currentWords.length-1 ? (currentWords[i] + " ") : (currentWords[i])
+  }
+  document.getElementById("words").innerHTML = string
+}
  
 function generateWords() {
   currentWords = []
@@ -22,15 +30,6 @@ function generateWords() {
   for (let i = 0; i < getQuantity(); i++) {
     currentWords.push(words[Math.floor(Math.random()*words.length)]);
   }
-  console.log(currentWords)
   displayWords()
-}
-
-function displayWords() {
-  string = ""
-  for (let i = 0; i < currentWords.length; i++) {
-    string += currentWords[i] + " "
-  }
-  document.getElementById("words").innerHTML = string
 }
 
