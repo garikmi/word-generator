@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="output.css" rel="stylesheet">
+  </head>
+  <body class="font-mono bg-woodsmoke text-cadet_blue text-center">
+    <h1 class="text-3xl text-ghost font-bold mt-12">Word Generator</h1>
+    <input class="bg-shark p-1 rounded-full mt-9 border border-bunker" type="number" id="quantity" name="quantity" min="1">
+    <button class="px-2 py-1 rounded-full border-bunker border bg-dodger_blue text-bunker" type="button" onclick="generateWords()">Generate</button>
+
+    <p id="words" class="my-9 max-w-lg mx-auto"></p>
+
+    <script src="words_dictionary.js"></script>
+    <script src="javascript.js"></script>
+  </body>
+</html>
+
