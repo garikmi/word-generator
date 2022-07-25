@@ -1,3 +1,5 @@
+![Website Preview](screenshot.png)
+
 # Word Generator
 Generate a list of random words.
 
